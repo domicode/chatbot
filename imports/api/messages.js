@@ -27,13 +27,13 @@ Meteor.methods({
     });
 
     let options = {
-      sessionId: '123123123'
+      sessionId: chatId
     };
 
     let request = app.textRequest(text, options);
 
     request.on('response', Meteor.bindEnvironment(function (response, errror) {
-        text = response.result.fulfillment.speech;
+        text = response.result.fulfillment.speech + '<br><br><button class="js-yes">Ja</button><button class="js-no">Nein</nein>';
 
         Messages.insert({
           text,

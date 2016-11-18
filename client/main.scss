@@ -88,6 +88,24 @@ li {
   width: 60%;
   float: left;
   background: #ffebee;
+
+  button {
+    background: #e0f7fa;
+    border: 2px solid darken(#e0f7fa, 20%);
+    outline: none;
+    width: calc(50% - 0.5rem);
+    height: 3rem;
+    font-size: 1rem;
+    float: left;
+
+    &.js-yes {
+      margin-right: 1rem;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 li.text {
